@@ -43,7 +43,7 @@ const SignUp = () => {
 
     setLoading(true);
     try {
-      const { data } = await axios.post("https://musicplayer-backend-nub4.onrender.com", formData);
+      const { data } = await axios.post("https://musicplayer-backend-nub4.onrender.com/api/v1/signup", formData);
 
       // Save token to localStorage
       localStorage.setItem("authToken", data.token);
